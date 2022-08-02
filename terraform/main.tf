@@ -6,7 +6,7 @@ locals {
 }
 
 resource "azurerm_resource_group" "customer_bookings_rg" {
-  name     = "rg-customer-bookings-${local.location}-${local.environment}"
+  name     = "rg-${local.service_name}-${local.location}-${local.environment}"
   location = local.location
 }
 
