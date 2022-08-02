@@ -13,7 +13,7 @@ resource "azurerm_mssql_server" "sql_server" {
   administrator_login           = var.sql_server_administrator_login
   administrator_login_password  = random_password.sql_server_password.result
   minimum_tls_version           = "1.2"
-  public_network_access_enabled = false
+  public_network_access_enabled = true
   tags                          = var.sql_server_resource_tags
 }
 
